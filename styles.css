@@ -1,7 +1,64 @@
+/**/
 
 
-.titulo_entrada {
+
+/*Parte de Salamero*/
+/*General y variables de color*/
+
+:root {
+    --main-color-body:#f4f0ea;
+}
+
+body {
+    background-color: var(--main-color-body);
+    display: flex;
+    justify-content: center;
+}
+
+/*Galeria de imagenes*/
+.galeria_imagenes {
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+}
+
+.galeria_imagenes .img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .10;
+    transition: .6s ease;
+}
+
+.galeria_imagenes .img:hover {
+    cursor: cell;
+    width: 60vw;
+    opacity: 10;
+}
+
+/*Titulo animado BIENVENIDA A LA PAGINA*/
+
+.titulo {
+    display: block;
     text-align: center;
-    font-size: 6vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    font-size: 7em;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 21ch;
+    animation: typing 2s steps(21),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
