@@ -6,34 +6,13 @@
 /*General y variables de color*/
 
 :root {
-    --main-color-body:#f4f0ea;
+    --main-color-body: #f4f0ea;
 }
 
 body {
     background-color: var(--main-color-body);
     display: flex;
     justify-content: center;
-}
-
-/*Galeria de imagenes*/
-.galeria_imagenes {
-    display: flex;
-    width: 80vw;
-    height: 70vh;
-}
-
-.galeria_imagenes .img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .10;
-    transition: .6s ease;
-}
-
-.galeria_imagenes .img:hover {
-    cursor: cell;
-    width: 60vw;
-    opacity: 10;
 }
 
 /*Titulo animado BIENVENIDA A LA PAGINA*/
@@ -61,4 +40,128 @@ body {
     50% {
         border-color: transparent;
     }
+}
+
+/*Galeria de imagenes*/
+.galeria_imagenes {
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+}
+
+.galeria_imagenes .img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .40;
+    transition: .6s ease;
+}
+
+.galeria_imagenes .img:hover {
+    cursor: cell;
+    width: 60vw;
+    opacity: 10;
+}
+
+/*first_line*/
+.first_line {
+    width: 100%;
+
+}
+
+/*titulo_section*/
+.titulo_section {
+    font-size: 3.5vw;
+    font-family: monospace;
+}
+
+.titulo_slider {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: monospace;
+}
+/*about-us*/
+
+.about-us {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-us .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-us .rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left {
+    width: 40VW;
+    height: 60vh;
+    background-image: url(./media/6.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rigth {
+    background-color: rgb(187, 180, 180);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 40VW;
+    height: 60vh;
+}
+
+.foto2 {
+    width: 20vw;
+    height: 40vh;
+}
+
+/*input_ver_mas*/
+
+.input_ver_mas {
+    display: none;
+}
+
+.span {
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    background: rgb(65, 65, 65);
+    border-radius: 100%;
+    transition: ease;
+}
+
+.span:after {
+    content: "";
+    position: absolute;
+    border: solid white;
+    border-width: 0 0.20em 0.20em 0;
+    transform: rotate(45deg);
+    width: 0.8em;
+    height: 0.8em;
+    left: 0.50em;
+    top: 0.25em;
+    opacity: 1;
+    transition: .3s ease;
+}
+
+.label {
+    font-size: 1em;
+    cursor: crosshair;
+}
+
+.label .input_ver_mas:checked~.span {
+    box-shadow: 0px 0px 30px 0px rgb(0, 169, 199);
+}
+
+.label .input_ver_mas:checked~.span:after {
+    opacity: 1;
 }
