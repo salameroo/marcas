@@ -1,0 +1,370 @@
+/*Parte de Nick*/
+
+.navbar {
+    position:fixed;
+    display: flex;
+}
+
+.header {
+    background-color: #1b3039;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98.2vw;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .nav-links {
+    font-size: 1.2vw;
+    font-family:sans-serif;
+    list-style: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+    color: #0eff4a;
+}
+
+.header .btn button {
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+    background-color: #e2f1f8;
+    color: #0eb7ff;
+    transform: scale(1.1);
+}
+
+
+/* Parte de Anayat */
+.footer {
+    background: linear-gradient(rgb(11, 62, 92), #1b3039, rgb(11, 62, 92));
+    color: gold;
+    padding: 50px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex-basis: 30%;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*Parte de Salamero*/
+/*General y variables de color*/
+
+:root {
+    --main-color-body: #f0f0f0;
+    --color-boton-body: #A9A9A9;
+    --div-rigth-body: #EEE8AA;
+}
+
+body {
+    background-color: var(--main-color-body);
+
+}
+
+/*Body */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Entrada de la pagina*/
+.entrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/18/14/08/jetty-1834801_1280.jpg);
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 98vw;
+    height: 100vh;
+}
+
+/*Titulo animado BIENVENIDA A LA PAGINA*/
+
+.titulo {
+    display: block;
+    text-align: center;
+    font-size: 7em;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    margin-bottom: 17vw;
+    background-color: #a9a9a954;
+    width: 21ch;
+    animation: typing 2s steps(21),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+/*Galeria de imagenes*/
+.galeria_imagenes {
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+}
+
+.galeria_imagenes .img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .40;
+    transition: .6s ease;
+}
+
+.galeria_imagenes .img:hover {
+    cursor: cell;
+    width: 60vw;
+    opacity: 10;
+}
+
+/*first_line*/
+.first_line {
+    width: 100%;
+}
+
+/*titulo_section*/
+.titulo_section {
+    font-size: 3.5vw;
+    font-family: monospace;
+}
+
+.titulo_slider {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+/*about-us*/
+
+.about-us {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-us .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-us .rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left {
+    width: 40VW;
+    height: 60vh;
+    background-image: url(./media/6.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rigth {
+    background-image: url(./media/6.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 40VW;
+    height: 60vh;
+}
+
+.foto2 {
+    width: 20vw;
+    height: 40vh;
+}
+
+/*input_ver_mas*/
+
+.input_ver_mas {
+    display: none;
+}
+
+.span {
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    background: var(--color-boton-body);
+    border-radius: 100%;
+    transition: ease;
+}
+
+.span:after {
+    content: "";
+    position: absolute;
+    border: solid white;
+    border-width: 0 0.20em 0.20em 0;
+    transform: rotate(45deg);
+    width: 0.8em;
+    height: 0.8em;
+    left: 0.50em;
+    top: 0.25em;
+    opacity: 1;
+    transition: .3s ease;
+}
+
+.label {
+    font-size: 1em;
+    cursor: crosshair;
+}
+
+.label .input_ver_mas:checked~.span {
+    box-shadow: 0px 0px 30px 0px rgb(0, 169, 199);
+}
+
+.label .input_ver_mas:checked~.span:after {
+    opacity: 1;
+}
+
+.barra_buscar {
+    font-family: monospace;
+    font-size: 1.5vw;
+}
+
+/*Enlace ubicacion solo para movil*/
+.enlace_ubi {
+    display: none;
+}
+
+/*Componentes extras*/
+.trabajadores {
+    display: flex;
+
+}
+
+.imagen_trabajadores {
+    width: 20vw;
+}
+
+
+/*Media queries*/
+
+@media (max-width: 1600px) {
+    .titulo_entrada {
+        font-size: 0.9vw;
+    }
+
+    .mapa {
+        display: none;
+    }
+
+    .contenedor_enlace {
+        background: linear-gradient(rgb(68, 11, 226), rgb(29, 106, 248), rgb(8, 158, 163));
+        padding: 12%;
+    }
+
+    .enlace_ubi {
+        display: block;
+        color: rgb(0, 255, 221);
+        text-decoration: none;
+        font-family: monospace;
+    }
+
+    .foto2 {
+        width: 25vw;
+        height: 35vh;
+    }
+
+}
+
+/*and (orientation: landscape)*/
+
+/*Preguntar como se hace lo del desplegable*/
