@@ -1,7 +1,38 @@
+/*Partes generales con codigo necesario*/
+
+@font-face {
+    font-family: apple-basic;
+    src: url(./fonts/YosemiteSanFranciscoFont-master/System\ San\ Francisco\ Display\ Bold.ttf);
+    font-family: apple-normal;
+    src: url(./fonts/YosemiteSanFranciscoFont-master/System\ San\ Francisco\ Display\ Regular.ttf);
+    font-family: apple-thin;
+    src: url(./fonts/YosemiteSanFranciscoFont-master/System\ San\ Francisco\ Display\ Ultralight.ttf);
+}
+
+/*al final de cada variable se indica a que afecta: nav, body, footer*/
+:root {
+    --enlaces-nav: #eceff1;
+    --hover-enlaces-nav: #0eff4a;
+    --letra-btn-contact-nav: #1b3039;
+    --fondo-btn-contact-nav: #eceff1;
+    --hover-letra-btn-nav: #005279;
+    --hover-fondo-btn-nav: #0eb7ff;
+    --main-color-body: #f0f0f0;
+    --color-boton-body: #A9A9A9;
+    --staff-bg-body: #ffffff;
+    --proyecto-bg-body: #000000aa;
+    --letra-footer: #ffffff;
+}
+
+body {
+    background-color: var(--main-color-body);
+}
+
+
 /*Parte de Nick*/
 
 .navbar {
-    position:fixed;
+    position: fixed;
     display: flex;
 }
 
@@ -37,7 +68,7 @@
 
 .header .nav-links {
     font-size: 1.2vw;
-    font-family:sans-serif;
+    font-family: sans-serif;
     list-style: none;
 }
 
@@ -52,19 +83,19 @@
 
 .header .nav-links a {
     font-size: 700;
-    color: #eceff1;
+    color: var(--enlaces-nav);
     text-decoration: none;
 }
 
 .header .nav-links li a:hover {
-    color: #0eff4a;
+    color: var(--hover-enlaces-nav);
 }
 
 .header .btn button {
     font-weight: 700;
-    color: #1b3039;
+    color: var(--letra-btn-contact-nav);
     padding: 9px 25px;
-    background: #eceff1;
+    background: var(--fondo-btn-contact-nav);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -72,70 +103,12 @@
 }
 
 .header .btn button:hover {
-    background-color: #e2f1f8;
-    color: #0eb7ff;
+    background-color: var(--hover-letra-btn-nav);
+    color: var(--hover-fondo-btn-nav);
     transform: scale(1.1);
 }
 
-
-/* Parte de Anayat */
-.footer {
-    background: linear-gradient(rgb(11, 62, 92), #1b3039, rgb(11, 62, 92));
-    color: gold;
-    padding: 50px 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-column {
-    flex-basis: 30%;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: gold;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /*Parte de Salamero*/
-/*General y variables de color*/
-
-:root {
-    --main-color-body: #f0f0f0;
-    --color-boton-body: #A9A9A9;
-    --div-rigth-body: #EEE8AA;
-}
-
-body {
-    background-color: var(--main-color-body);
-
-}
-
 /*Body */
 .body {
     display: flex;
@@ -164,12 +137,13 @@ body {
     display: block;
     text-align: center;
     font-size: 7em;
-    font-family: monospace;
+    font-family: apple-thin;
+    font-weight: 300;
     white-space: nowrap;
     border-right: 4px solid;
     margin-bottom: 17vw;
     background-color: #a9a9a954;
-    width: 21ch;
+    width: 19ch;
     animation: typing 2s steps(21),
         blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -219,23 +193,24 @@ body {
 /*titulo_section*/
 .titulo_section {
     font-size: 3.5vw;
-    font-family: monospace;
+    font-family: apple-normal;
 }
 
 .titulo_slider {
     text-align: center;
     font-size: 2vw;
     font-weight: 600;
-    font-family: monospace;
+    font-family: apple-normal;
 }
 
 /*about-us*/
 
 .about-us {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
+/* 
 .about-us .left {
     display: flex;
     flex-direction: column;
@@ -264,59 +239,65 @@ body {
     background-attachment: fixed;
     width: 40VW;
     height: 60vh;
+} */
+/*Trabajadores*/
+.title_trabajadores {
+    font-size: 5vw;
+    font-family: apple-thin;
+    text-align: center;
 }
 
-.foto2 {
-    width: 20vw;
-    height: 40vh;
+.trabajador1 {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: var(--staff-bg-body);
 }
 
-/*input_ver_mas*/
-
-.input_ver_mas {
-    display: none;
+.trabajador2 {
+    width: 80vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: var(--staff-bg-body);
 }
 
-.span {
-    display: inline-block;
-    position: relative;
-    width: 2em;
-    height: 2em;
-    background: var(--color-boton-body);
-    border-radius: 100%;
-    transition: ease;
+.ahinoa {
+    font-size: 2vw;
+    font-family: apple-thin;
+    font-weight: 600;
 }
 
-.span:after {
-    content: "";
-    position: absolute;
-    border: solid white;
-    border-width: 0 0.20em 0.20em 0;
-    transform: rotate(45deg);
-    width: 0.8em;
-    height: 0.8em;
-    left: 0.50em;
-    top: 0.25em;
-    opacity: 1;
-    transition: .3s ease;
+/*Parte proyecto */
+
+.proyecto {
+    width: 98.1vw;
+    height: 20vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.label {
-    font-size: 1em;
-    cursor: crosshair;
-}
+.texto_proyecto {
+    text-align: center;
+    font-family: apple-thin;
+    color: white;
+    display: block;
+    font-size: 4em;
+    font-family: apple-thin;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 15ch;
+    animation: typing 2s steps(21),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
 
-.label .input_ver_mas:checked~.span {
-    box-shadow: 0px 0px 30px 0px rgb(0, 169, 199);
-}
-
-.label .input_ver_mas:checked~.span:after {
-    opacity: 1;
-}
-
-.barra_buscar {
-    font-family: monospace;
-    font-size: 1.5vw;
 }
 
 /*Enlace ubicacion solo para movil*/
@@ -355,7 +336,7 @@ body {
         display: block;
         color: rgb(0, 255, 221);
         text-decoration: none;
-        font-family: monospace;
+        font-family: apple-normal;
     }
 
     .foto2 {
@@ -367,4 +348,47 @@ body {
 
 /*and (orientation: landscape)*/
 
-/*Preguntar como se hace lo del desplegable*/
+
+/* Parte de Anayat */
+.footer {
+    background: linear-gradient(rgb(11, 62, 92), #1b3039, rgb(11, 62, 92));
+    color: var(--letra-footer);
+    padding: 50px 0;
+    bottom: 0;
+    width: 98vw;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex-basis: 30%;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--letra-footer);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
