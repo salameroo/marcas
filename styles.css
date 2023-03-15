@@ -1,0 +1,43 @@
+/* Parte de Anayat */
+.footer {
+  background: linear-gradient(rgb(11, 62, 92), #1b3039, rgb(11, 62, 92));
+  color: var(--letra-footer);
+  padding: 50px 0;
+  bottom: 0;
+  width: 98vw;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex-basis: 30%;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: var(--letra-footer);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
