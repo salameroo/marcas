@@ -1,0 +1,237 @@
+/*Partes generales con codigo necesario*/
+
+@font-face {
+    font-family: apple-basic;
+    src: url(../resources/fonts/YosemiteSanFranciscoFont-master/System\ San\ Francisco\ Display\ Bold.ttf);
+    font-family: apple-normal;
+    src: url(../resources/fonts/YosemiteSanFranciscoFont-master/System\ San\ Francisco\ Display\ Regular.ttf);
+    font-family: apple-thin;
+    src: url(../resources/fonts/YosemiteSanFranciscoFont-master/System\ San\ Francisco\ Display\ Ultralight.ttf);
+}
+
+/*al final de cada variable se indica a que afecta: nav, body, footer*/
+:root {
+    --enlaces-nav: #eceff1;
+    --hover-enlaces-nav: #0eff4a;
+    --letra-btn-contact-nav: #1b3039;
+    --fondo-btn-contact-nav: #eceff1;
+    --hover-letra-btn-nav: #005279;
+    --hover-fondo-btn-nav: #0eb7ff;
+    --main-color-body: #f0f0f0;
+    --color-boton-body: #A9A9A9;
+    --staff-bg-body: #ffffff;
+    --proyecto-bg-body: #000000aa;
+    --letra-footer: #ffffff;
+}
+
+body {
+    background-color: var(--main-color-body);
+}
+
+
+
+/*Parte de Salamero*/
+/*Body */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Entrada de la pagina*/
+.entrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/18/14/08/jetty-1834801_1280.jpg);
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 98vw;
+    height: 100vh;
+}
+
+/*Titulo animado BIENVENIDA A LA PAGINA*/
+
+.titulo {
+    display: block;
+    text-align: center;
+    font-size: 7em;
+    font-family: apple-thin;
+    font-weight: 300;
+    white-space: nowrap;
+    border-right: 4px solid;
+    margin-bottom: 17vw;
+    background-color: #a9a9a954;
+    width: 19ch;
+    animation: typing 2s steps(21),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+/*Galeria de imagenes*/
+.galeria_imagenes {
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+}
+
+.galeria_imagenes .img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .40;
+    transition: .6s ease;
+}
+
+.galeria_imagenes .img:hover {
+    cursor: cell;
+    width: 60vw;
+    opacity: 10;
+}
+
+/*first_line*/
+.first_line {
+    width: 100%;
+}
+
+/*titulo_section*/
+.titulo_section {
+    font-size: 3.5vw;
+    font-family: apple-normal;
+}
+
+.titulo_slider {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: apple-normal;
+}
+
+/*about-us*/
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Trabajadores*/
+.title_trabajadores {
+    font-size: 5vw;
+    font-family: apple-thin;
+    text-align: center;
+}
+
+.trabajador1 {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: var(--staff-bg-body);
+}
+
+.trabajador2 {
+    width: 80vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: var(--staff-bg-body);
+}
+
+.ahinoa {
+    font-size: 2vw;
+    font-family: apple-thin;
+    font-weight: 600;
+}
+
+/*Parte proyecto */
+
+.proyecto {
+    width: 98.1vw;
+    height: 20vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_proyecto {
+    text-align: center;
+    font-family: apple-thin;
+    color: white;
+    display: block;
+    font-size: 4em;
+    font-family: apple-thin;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 15ch;
+    animation: typing 2s steps(21),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+}
+
+/*Enlace ubicacion solo para movil*/
+.enlace_ubi {
+    display: none;
+}
+
+/*Componentes extras*/
+.trabajadores {
+    display: flex;
+
+}
+
+.imagen_trabajadores {
+    width: 20vw;
+}
+
+
+/*Media queries*/
+
+@media (max-width: 1600px) {
+    .titulo_entrada {
+        font-size: 0.9vw;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .titulo_entrada {
+        font-size: 0.9vw;
+    }
+
+    .header {
+        background-color: #1b3039;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 98.2vw;
+        height: 85px;
+    }
+
+}
+
+/*and (orientation: landscape)*/
