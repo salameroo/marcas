@@ -29,84 +29,6 @@ body {
 }
 
 
-/*Parte de Nick*/
-
-.navbar {
-    position: fixed;
-    display: flex;
-}
-
-.header {
-    background-color: #1b3039;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98.2vw;
-    height: 85px;
-    padding: 5px 10%;
-}
-
-.header .logo {
-    cursor: pointer;
-}
-
-.header .logo img {
-    height: 70px;
-    width: auto;
-    transition: all 0.3s;
-}
-
-.header .logo img:hover {
-    transform: scale(1.2);
-}
-
-.header .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header .nav-links {
-    font-size: 1.2vw;
-    font-family: sans-serif;
-    list-style: none;
-}
-
-.header .nav-links li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.header .nav-links li:hover {
-    transform: scale(1.1);
-}
-
-.header .nav-links a {
-    font-size: 700;
-    color: var(--enlaces-nav);
-    text-decoration: none;
-}
-
-.header .nav-links li a:hover {
-    color: var(--hover-enlaces-nav);
-}
-
-.header .btn button {
-    font-weight: 700;
-    color: var(--letra-btn-contact-nav);
-    padding: 9px 25px;
-    background: var(--fondo-btn-contact-nav);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.header .btn button:hover {
-    background-color: var(--hover-letra-btn-nav);
-    color: var(--hover-fondo-btn-nav);
-    transform: scale(1.1);
-}
 
 /*Parte de Salamero*/
 /*Body */
@@ -210,36 +132,6 @@ body {
     flex-direction: column;
 }
 
-/* 
-.about-us .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.about-us .rigth {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.left {
-    width: 40VW;
-    height: 60vh;
-    background-image: url(./media/6.png);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.rigth {
-    background-image: url(./media/6.png);
-    background-size: cover;
-    background-attachment: fixed;
-    width: 40VW;
-    height: 60vh;
-} */
 /*Trabajadores*/
 .title_trabajadores {
     font-size: 5vw;
@@ -323,72 +215,23 @@ body {
         font-size: 0.9vw;
     }
 
-    .mapa {
-        display: none;
+
+}
+
+@media (max-width: 500px) {
+    .titulo_entrada {
+        font-size: 0.9vw;
     }
 
-    .contenedor_enlace {
-        background: linear-gradient(rgb(68, 11, 226), rgb(29, 106, 248), rgb(8, 158, 163));
-        padding: 12%;
-    }
-
-    .enlace_ubi {
-        display: block;
-        color: rgb(0, 255, 221);
-        text-decoration: none;
-        font-family: apple-normal;
-    }
-
-    .foto2 {
-        width: 25vw;
-        height: 35vh;
+    .header {
+        background-color: #1b3039;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 98.2vw;
+        height: 85px;
     }
 
 }
 
 /*and (orientation: landscape)*/
-
-
-/* Parte de Anayat */
-.footer {
-    background: linear-gradient(rgb(11, 62, 92), #1b3039, rgb(11, 62, 92));
-    color: var(--letra-footer);
-    padding: 50px 0;
-    bottom: 0;
-    width: 98vw;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-column {
-    flex-basis: 30%;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: var(--letra-footer);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
